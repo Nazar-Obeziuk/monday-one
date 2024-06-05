@@ -1643,7 +1643,7 @@ body {
     display: none;
     &.mobile {
       display: block;
-      height: 430px;
+      height: 100%;
     }
   }
   .right_block {
@@ -1937,5 +1937,25 @@ body {
 
   .right_block .rating_dislpay {
     align-items: end;
+  }
+}
+
+@media (max-width: 380px) {
+  .right_block .rating_block {
+    width: 100%;
+    display: flex !important;
+    justify-content: flex-start !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+  }
+
+  .awards_block .awards_text {
+    font-size: 12px !important;
+  }
+
+  .awards_block .awards_list .list_item {
+    width: 26px !important;
+    height: 26px !important;
   }
 }

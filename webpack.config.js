@@ -10,7 +10,7 @@ module.exports = {
     about: "./src/pages/about/index.js",
   },
   output: {
-    path: path.resolve(__dirname, "public"),
+    path: path.resolve(__dirname, "dist"),
     filename: "[name].bundle.js",
   },
   module: {
@@ -76,7 +76,7 @@ module.exports = {
   ],
   devServer: {
     static: {
-      directory: path.join(__dirname, "public"),
+      directory: path.join(__dirname, "dist"),
     },
     compress: true,
     port: 9001,
