@@ -360,6 +360,14 @@ body {
     padding: 160px 12px 0 12px;
   }
 
+  .list_of_main {
+    padding: 0 12px !important;
+  }
+
+  .certificate_block {
+    padding: 20px 12px 0 12px !important;
+  }
+
   .price_block {
     justify-content: space-between;
     flex-direction: row;
@@ -903,7 +911,7 @@ body {
 
 .list_item.active {
   background: white !important;
-  padding-top: 24px !important;
+  // padding-top: 24px !important;
   padding-left: 16px !important;
 }
 
@@ -930,18 +938,19 @@ body {
   display: flex;
   column-gap: 10px;
   row-gap: 10px;
-  padding-top: 30px;
+  // padding-top: 30px;
   flex-wrap: wrap;
   justify-content: center;
   .list_item {
-    width: 260px;
+    width: calc(20% - 10px);
     height: 91px;
     background-color: #fafafc;
     border-radius: 16px;
     display: flex;
     column-gap: 8px;
-    padding-top: 28px;
-    padding-left: 25px;
+    align-items: center;
+    // padding-top: 28px;
+    padding-left: 16px;
     .item_text {
       display: flex;
       flex-direction: column;
@@ -968,7 +977,7 @@ body {
 }
 
 .certificate_block {
-  padding: 30px 12px 0px 12px;
+  padding: 20px 0 0px 0;
 }
 .certificate_title {
   font-size: 24px;
@@ -989,7 +998,7 @@ body {
   gap: 25px;
 }
 .certificate_sidebar {
-  width: calc(20% - 20px);
+  width: calc(20% - 10px);
   height: 285px;
   padding: 40px 10px 10px 10px;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -1283,13 +1292,46 @@ body {
   display: none;
 }
 .desktop_list {
+  width: 100%;
   display: flex;
-  column-gap: 10px;
-  row-gap: 10px;
-  padding-top: 30px;
+  // column-gap: 10px;
+  // row-gap: 10px;
+  padding-top: 15px;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
+  gap: 10px;
 }
+@media (max-width: 1260px) {
+  .list_of_main .list_item {
+    width: 25% !important;
+  }
+
+  .desktop_list {
+    justify-content: center;
+  }
+}
+@media (max-width: 1000px) {
+  .list_of_main .list_item {
+    width: 33% !important;
+  }
+}
+@media (max-width: 768px) {
+  .list_of_main .list_item {
+    width: 49% !important;
+  }
+}
+@media (max-width: 645px) {
+  .list_of_main .list_item {
+    width: 100% !important;
+  }
+  .mobile_list {
+    padding: 10px 0;
+  }
+  .certificate_block {
+    padding: 0 12px !important;
+  }
+}
+
 .footer_button_block {
   width: 100%;
   display: flex;
