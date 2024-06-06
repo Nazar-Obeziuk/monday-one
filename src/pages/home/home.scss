@@ -49,17 +49,17 @@ body {
   display: none;
   width: 20px;
   height: 16px;
-  border-top: 1px solid var(--dark--color);
-  border-bottom: 1px solid var(--dark--color);
-  position: relative;
-  &::after {
-    content: "";
-    width: 13px;
-    border-top: 1px solid var(--dark--color);
-    position: absolute;
-    top: 6px;
-    left: 0px;
-  }
+  // border-top: 1px solid var(--dark--color);
+  // border-bottom: 1px solid var(--dark--color);
+  // position: relative;
+  // &::after {
+  //   content: "";
+  //   width: 13px;
+  //   border-top: 1px solid var(--dark--color);
+  //   position: absolute;
+  //   top: 6px;
+  //   left: 0px;
+  // }
 }
 .logo {
   font-size: 16px;
@@ -123,6 +123,7 @@ body {
     padding-top: 12px;
     padding-left: 8px;
     .input_icon {
+      padding-top: -2px !important;
     }
   }
 }
@@ -132,7 +133,7 @@ body {
   flex: 1 auto;
   justify-content: flex-end;
   column-gap: 25px;
-  padding-right: 20px;
+  padding-right: 44px;
 
   transition: all 0.4s;
 }
@@ -148,7 +149,8 @@ body {
 
 .options_menu {
   display: flex;
-  column-gap: 5px;
+  column-gap: 10px;
+  padding-right: 20px;
   .menu_item {
     width: 35px;
     height: 35px;
@@ -245,7 +247,7 @@ body {
       display: flex;
       align-items: center;
       flex-wrap: nowrap;
-      padding: 0px 14.5px;
+      padding: 0px 16px;
       height: 45px;
       white-space: nowrap;
       font-weight: 500;
@@ -262,11 +264,11 @@ body {
     right: 0;
     top: 0;
     display: flex;
-    column-gap: 6px;
+    column-gap: 14px;
     align-items: center;
-    border-left: 1px solid #9ca5b3;
+    // border-left: 1px solid #9ca5b3;
     background-color: #fff;
-    padding: 11.5px 4px 11.5px 8px;
+    padding: 11.5px 0 11.5px 0;
 
     .dropdown_title {
       font-size: 16px;
@@ -276,6 +278,12 @@ body {
     .dropdown_arrow {
     }
   }
+}
+
+.dropdown_menu_line {
+  width: 1px;
+  height: 20px;
+  background: #9ca5b3;
 }
 
 @media (max-width: 1028px) {
@@ -294,10 +302,28 @@ body {
   }
 }
 @media (max-width: 645px) {
+  .menu_burger {
+    width: auto;
+    height: auto;
+  }
+  .menu_burger img {
+    display: block;
+  }
+  .main_menu {
+    padding-right: 10px !important;
+  }
+  .options_menu .menu_item {
+    width: 18px;
+    height: 18px;
+    display: block;
+    padding-top: 0;
+  }
   .options_menu {
     display: none;
     &.mobile {
       display: flex;
+      padding-right: 0;
+      gap: 24px;
     }
   }
   .user_menu {
@@ -777,7 +803,7 @@ body {
     .button_title {
       font-size: 18px;
       color: #fff;
-      font-weight: 500;
+      font-weight: 400;
     }
   }
   .item_edit {
@@ -1076,8 +1102,8 @@ body {
     }
   }
   .item_textes {
-    padding-left: 10px;
-    padding-top: 7px;
+    padding-left: 6.5px;
+    padding-top: 5px;
     .item_title {
       font-size: 16px;
       font-weight: 700;
@@ -1086,7 +1112,6 @@ body {
       display: flex;
       align-items: center;
       column-gap: 2px;
-      padding-top: 2px;
       .edit_image {
         width: 16px;
         height: 16px;
@@ -1330,6 +1355,18 @@ body {
   .certificate_block {
     padding: 0 12px !important;
   }
+
+  .input_block .input_icon_block {
+    padding-top: 10px;
+  }
+
+  .certificate_item {
+    padding: 5px 5px 20px 5px;
+  }
+}
+
+.certificate_item {
+  padding: 5px 8.5px 20px 8.5px;
 }
 
 .footer_button_block {
@@ -1382,7 +1419,7 @@ body {
   right: 0;
   width: 200px;
   padding: 14px 0;
-  background: rgba(255, 255, 255, 1);
+  background: rgba(255, 255, 255, 0.8);
   display: flex;
   align-items: center;
   gap: 8px;
@@ -1566,7 +1603,8 @@ body {
   .drop_menu {
     width: 100%;
     padding: 14px 0;
-    background: linear-gradient(90deg, #6ab8ff 0%, #bdebff 100%);
+    background: linear-gradient(90deg, #6ab8ff 0%, #93cdff 35%, #def5ff 100%);
+
     border-radius: 12px;
     padding-right: 0;
     display: flex;
@@ -1591,7 +1629,7 @@ body {
     column-gap: 10px;
     align-items: center;
     width: 220px;
-    border-radius: 12px;
+    border-radius: 14px;
     padding: 14px 0;
     border: 1px solid #9ca5b3;
     justify-content: center;
@@ -1669,6 +1707,11 @@ body {
     flex-direction: row-reverse;
     padding: 16px 0;
     border-radius: 12px;
+    border: none;
+  }
+  .certificate_upload_image {
+    width: 18px;
+    height: 18px;
   }
   .certificate_sidebar {
     height: 100%;
@@ -1801,7 +1844,7 @@ body {
         .edit_text {
           font-size: 16px;
           font-weight: 700;
-          color: var(--gray-color);
+          color: #b7c3d6;
         }
       }
     }
